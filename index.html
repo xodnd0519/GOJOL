@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>고졸취업핏</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">고졸취업핏</div>
+      <div class="nav-badge">특성화고 취업 추천 MVP</div>
+    </nav>
+
+    <section class="hero-content">
+      <div>
+        <p class="eyebrow">WORKNET JOB FIT SERVICE</p>
+        <h1>특성화고 학생을 위한<br />졸업 후 바로 취업 공고 추천 서비스</h1>
+        <p class="hero-desc">
+          고졸 가능, 학력무관, 신입 가능, 경력무관 공고를 학생 눈높이에 맞게 정리해 보여줍니다.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <span class="hero-card-title">학생 적합도 기준</span>
+        <strong>학력 · 경력 · 고용형태 · 급여 · 마감일</strong>
+        <p>공고마다 최대 100점으로 계산합니다.</p>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="filter-section">
+      <div class="filter-header">
+        <div>
+          <h2>채용공고 추천 목록</h2>
+          <p>조건을 바꾸면 학생에게 적합한 공고가 자동으로 정렬됩니다.</p>
+        </div>
+        <div class="result-count">
+          <span id="jobCount">0</span>개 공고
+        </div>
+      </div>
+
+      <div class="filters">
+        <label>
+          지역
+          <select id="regionFilter">
+            <option value="전체">전체</option>
+            <option value="서울">서울</option>
+            <option value="경기">경기</option>
+            <option value="인천">인천</option>
+            <option value="부산">부산</option>
+          </select>
+        </label>
+
+        <label>
+          직무
+          <select id="jobTypeFilter">
+            <option value="전체">전체</option>
+            <option value="IT/개발">IT/개발</option>
+            <option value="사무/회계">사무/회계</option>
+            <option value="생산/품질">생산/품질</option>
+            <option value="디자인">디자인</option>
+            <option value="물류">물류</option>
+          </select>
+        </label>
+
+        <label>
+          정렬
+          <select id="sortFilter">
+            <option value="score">학생 적합도 높은순</option>
+            <option value="deadline">마감 빠른순</option>
+            <option value="salary">급여 높은순</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section id="jobList" class="job-list"></section>
+  </main>
+
+  <footer class="footer">
+    본 서비스는 워크넷 채용정보 API 연동을 목표로 설계되었으며, 현재 MVP에서는 샘플 데이터를 사용합니다.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
